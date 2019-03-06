@@ -12,8 +12,9 @@
         var name = $('#name').val();
         var purpose = $('#purpose').val();
         var bywho = $('#bywho').val();
+        var colortemp= $('#colortemp').val();
         
-        $('.name').html(name);
+        $('.name').html(name).css("color",colortemp)
         $('.purpose').html(purpose);
         $('.bywho').html(bywho);
         
@@ -55,7 +56,7 @@
      padding:20px;
      margin: 0 auto;
      text-align:center;
-     border: 10px solid orange
+     border: 10px solid orange;
       
     }
     .template2 {
@@ -71,7 +72,14 @@
 </head>
 
 <body>
-  Presented by : <input id="bywho"><br> The purpose of the award :<input id="purpose"><br> The name of the person receiving the award : <input id="name"><br>
+  Presented by : <input id="bywho"><br> The purpose of the award :<input id="purpose"><br> The name of the person receiving the award : <input id="name"><br> 
+ Please select a color for the name that's going to be receiving the certificate : <select id="colortemp">
+    <option value="black">black</option>
+    <option value="blue">blue</option>
+    <option value="red">red</option>
+    <option value="brown">brown</option>
+  </select>
+  <br>
 
 
   <button>Generate Award Certificate!</button>
